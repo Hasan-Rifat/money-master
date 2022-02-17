@@ -41,7 +41,6 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const income = getInput('input-income');
     const incomeAll = income - totalCost;
     totalBalance.innerText = incomeAll;
-    return incomeAll;
 
 });
 
@@ -52,7 +51,14 @@ document.getElementById('percentage-btn').addEventListener('click', function () 
     savingAmount.innerText = multiplySaving;
     // final Balance
     const finalBalance = getText('total-balance');
-    const complete = getText('saving-amount')
+    const complete = getText('saving-amount');
     const totalComplete = finalBalance - complete;
     remainingBalance.innerText = totalComplete;
 });
+
+
+
+
+
+
+

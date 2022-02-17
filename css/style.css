@@ -9,3 +9,16 @@ body {
     width: 100% !important;
     height: 90vh;
 }
+
+/* Notifications */
+
+p.notis {
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+/* display none  */
+
+.disply-none{
+    display: none;
+}
