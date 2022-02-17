@@ -19,16 +19,40 @@ function getInput(input) {
     const inputValue = parseFloat(inputName.value);
     return inputValue;
 }
+
 function getText(inner) {
     const text = document.getElementById(inner);
     const textValue = parseFloat(text.innerText);
     return textValue;
 }
 
-document.getElementById('calculate-btn').addEventListener('click', function(){
+function multiply(amountSaving) {
+    const saving = saving / amountSaving;
+    return saving;
+}
+
+document.getElementById('calculate-btn').addEventListener('click', function () {
     const costFood = getInput('input-food');
     const costRent = getInput('input-rent');
     const costClothes = getInput('input-clothes');
     const totalCost = costFood + costRent + costClothes;
     totalExpenses.innerText = totalCost;
+    // income - expenses 
+    const income = getInput('input-income');
+    const incomeAll = income - totalCost;
+    totalBalance.innerText = incomeAll;
+    return incomeAll;
+
+});
+
+document.getElementById('percentage-btn').addEventListener('click', function () {
+    const income = getInput('input-income');
+    const savingCost = getInput('percentage');
+    const multiplySaving = (income * savingCost) / 100;
+    savingAmount.innerText = multiplySaving;
+    // final Balance
+    const finalBalance = getText('total-balance');
+    const complete = getText('saving-amount')
+    const totalComplete = finalBalance - complete;
+    remainingBalance.innerText = totalComplete;
 });
